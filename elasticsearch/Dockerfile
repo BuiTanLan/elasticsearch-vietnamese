@@ -1,6 +1,6 @@
 ARG ELK_VERSION
 
-FROM ubuntu as builder
+FROM ubuntu:20.04 as builder
 
 ADD https://github.com/coccoc/coccoc-tokenizer/archive/refs/heads/master.zip /
 RUN apt-get update -y && apt-get install -y unzip cmake g++ default-jdk
